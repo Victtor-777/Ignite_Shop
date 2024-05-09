@@ -1,4 +1,12 @@
+import { styled } from "@/styles";
 import Head from "next/head";
+
+const Button = styled("button", {
+  backgroundColor: "$rocketseat",
+  borderRadius: 4,
+  border: 0,
+  padding: "4px 8px",
+});
 
 export default function Home() {
   return (
@@ -10,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Hello Word!</h1>
+        <Button>Enviar</Button>
       </main>
     </>
   );
