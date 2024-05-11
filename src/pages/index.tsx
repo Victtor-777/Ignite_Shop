@@ -1,12 +1,9 @@
-import { styled } from "@/styles";
+import { HomeContainer, Product } from "@/styles/pages/home";
 import Head from "next/head";
-
-const Button = styled("button", {
-  backgroundColor: "$green500",
-  borderRadius: 4,
-  border: 0,
-  padding: "4px 8px",
-});
+import Image from "next/image";
+import camisa1 from "../assets/camisa1.png";
+import camisa2 from "../assets/camisa2.png";
+import camisa3 from "../assets/camisa3.png";
 
 export default function Home() {
   return (
@@ -17,9 +14,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Button>Enviar</Button>
-      </main>
+      <HomeContainer>
+        <Product>
+          <Image src={camisa1} alt="" width={520} height={480} />
+
+          <footer>
+            <strong>Camisa X</strong>
+            <span>R$ 79,90</span>
+          </footer>
+        </Product>
+
+        <Product>
+          <Image src={camisa2} alt="" width={520} height={480} />
+
+          <footer>
+            <strong>Camisa X</strong>
+            <span>R$ 79,90</span>
+          </footer>
+        </Product>
+      </HomeContainer>
     </>
   );
 }
